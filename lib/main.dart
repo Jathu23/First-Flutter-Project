@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    MaterialApp(
-    home: MainApp(), 
-    )
+    MainApp()
   );
 }
 
 class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text("hello");
+    return  MaterialApp(
+    home: Container(
+      color: Colors.lightBlue,
+      child: Text("hello"),
+    )
+    );
   }
 }
