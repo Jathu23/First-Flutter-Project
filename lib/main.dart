@@ -6,9 +6,8 @@ void main() {
       home: Scaffold(
         body: Center(
     child: Container(
-      width:200,
-      height: 300,
-      alignment: Alignment.center,
+      width:300,
+      height: 500,
       decoration: BoxDecoration(
         color: Colors.blue,
         borderRadius:BorderRadius.circular(20),
@@ -17,6 +16,8 @@ void main() {
       
       
      child: Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
        Container(
         width: 100,
