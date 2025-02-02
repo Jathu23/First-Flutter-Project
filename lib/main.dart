@@ -15,16 +15,16 @@ class _CounterState extends State<Counter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('ListView Example')),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('$_counter', style: TextStyle(fontSize: 48)),
-            ElevatedButton(
-              onPressed: () => setState(() => _counter++),
-              child: Text('Increment'),
-            ),
-          ],
+        child: ListView.builder(
+          itemCount: 10, 
+          itemBuilder: (context, index) {
+           
+            return ListTile(
+              title: Text("Item $index"),
+            );
+          },
         ),
       ),
     );
