@@ -11,6 +11,7 @@ class Counter extends StatefulWidget {
 
 class _CounterState extends State<Counter> {
   int _counter = 0;
+  List<String> samplelist = ["apple", "orange", "grape", "pineapple"];
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +19,11 @@ class _CounterState extends State<Counter> {
       appBar: AppBar(title: Text('ListView Example')),
       body: Center(
         child: ListView.builder(
-          itemCount: 10, 
+          itemCount: samplelist.length, 
           itemBuilder: (context, index) {
-           
+            
             return ListTile(
-              title: Text("Item $index"),
+              title: Text('${index + 1}. ${samplelist[index]}'), 
             );
           },
         ),
