@@ -4,11 +4,6 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Flutter"),
-          backgroundColor: Colors.blue,
-          centerTitle: false,
-        ),
         body: Center(
     child: Container(
       width:200,
@@ -21,8 +16,19 @@ void main() {
       ),
       
       
-      
-      child: Container(
+     child: Row(
+      children: [
+       Container(
+        width: 100,
+        height: 150,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            color: Colors.amber,
+            borderRadius: BorderRadius.circular(30)
+        ),
+        child: Text("Hello Flutter"),
+      ),
+        Container(
         width: 100,
         height: 150,
         alignment: Alignment.center,
@@ -32,6 +38,8 @@ void main() {
         ),
         child: Text("Hello Flutter"),
       )
+      ],
+     ),
     ),
         ),
       )
