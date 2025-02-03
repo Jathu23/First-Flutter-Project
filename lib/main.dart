@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: Counter()));
+  runApp(todo());
 }
 
-class Counter extends StatefulWidget {
-  @override
-  _CounterState createState() => _CounterState();
-}
-
-class _CounterState extends State<Counter> {
-  int _counter = 0;
-  List<String> samplelist = ["apple", "orange", "grape", "pineapple"];
-
+class todo extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('ListView Example')),
-      body: Center(
-        child: ListView.builder(
-          itemCount: samplelist.length, 
-          itemBuilder: (context, index) {
-            
-            return ListTile(
-              title: Text('${index + 1}. ${samplelist[index]}'), 
-            );
-          },
-        ),
+   
+    return MaterialApp(home: (
+      Scaffold(
+        body: Column(
+          children: [
+      Container(
+        padding: EdgeInsets.all(20),
+        child:       TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                label: Text("Enter List")),
+            ),
       ),
-    );
+      MaterialButton(onPressed:  () {} ,
+      padding: EdgeInsets.all(30),
+      color: Colors.lightBlueAccent,
+      shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(30) ),
+      
+      child: Text("Click"),)
+          ],
+        ) ,)
+    ));
   }
 }
