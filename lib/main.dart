@@ -22,7 +22,10 @@ class _TodoAppState extends State<TodoApp> {
         ),
         body: Column(
           children: [
-            Container(
+     Row(
+    children: [
+      Expanded(child: 
+             Container(
               padding: EdgeInsets.all(20),
               child: TextField(
                 controller: listdatacontroller,
@@ -31,7 +34,8 @@ class _TodoAppState extends State<TodoApp> {
                   labelText: "Enter List Item",
                 ),
               ),
-            ),
+            ),),
+            
             MaterialButton(
               onPressed: () {
                 setState(() {
@@ -53,6 +57,8 @@ class _TodoAppState extends State<TodoApp> {
               ),
               child: Text("Add Item"),
             ),
+    ],
+     ),
             Expanded(
               child: ListView.builder(
                 itemCount: itemList.length,
